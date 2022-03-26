@@ -1,15 +1,15 @@
 {
-  "main.css": "/Idleon-Insight-Frontend/static/css/main.1eafc09c.chunk.css",
-  "main.js": "/Idleon-Insight-Frontend/static/js/main.cf5a9353.chunk.js",
-  "main.js.map": "/Idleon-Insight-Frontend/static/js/main.cf5a9353.chunk.js.map",
-  "static/js/1.db20f86d.chunk.js": "/Idleon-Insight-Frontend/static/js/1.db20f86d.chunk.js",
-  "static/js/1.db20f86d.chunk.js.map": "/Idleon-Insight-Frontend/static/js/1.db20f86d.chunk.js.map",
-  "static/js/2.3a2e0e0b.chunk.js": "/Idleon-Insight-Frontend/static/js/2.3a2e0e0b.chunk.js",
-  "static/js/2.3a2e0e0b.chunk.js.map": "/Idleon-Insight-Frontend/static/js/2.3a2e0e0b.chunk.js.map",
-  "runtime~main.js": "/Idleon-Insight-Frontend/static/js/runtime~main.8aac9075.js",
-  "runtime~main.js.map": "/Idleon-Insight-Frontend/static/js/runtime~main.8aac9075.js.map",
-  "static/css/main.1eafc09c.chunk.css.map": "/Idleon-Insight-Frontend/static/css/main.1eafc09c.chunk.css.map",
-  "index.html": "/Idleon-Insight-Frontend/index.html",
-  "precache-manifest.d571258e83ac7a3fff27bd90237a3a61.js": "/Idleon-Insight-Frontend/precache-manifest.d571258e83ac7a3fff27bd90237a3a61.js",
-  "service-worker.js": "/Idleon-Insight-Frontend/service-worker.js"
+  "main.css": "/static/css/main.1eafc09c.chunk.css",
+  "main.js": "/static/js/main.cf5a9353.chunk.js",
+  "main.js.map": "/static/js/main.cf5a9353.chunk.js.map",
+  "static/js/1.db20f86d.chunk.js": "/static/js/1.db20f86d.chunk.js",
+  "static/js/1.db20f86d.chunk.js.map": "/static/js/1.db20f86d.chunk.js.map",
+  "static/js/2.3a2e0e0b.chunk.js": "/static/js/2.3a2e0e0b.chunk.js",
+  "static/js/2.3a2e0e0b.chunk.js.map": "/static/js/2.3a2e0e0b.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.96cb2b49.js",
+  "runtime~main.js.map": "/static/js/runtime~main.96cb2b49.js.map",
+  "static/css/main.1eafc09c.chunk.css.map": "/static/css/main.1eafc09c.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.e5b4dc3aca93842572b3f408dc8fdbfe.js": "/precache-manifest.e5b4dc3aca93842572b3f408dc8fdbfe.js",
+  "service-worker.js": "/service-worker.js"
 }
