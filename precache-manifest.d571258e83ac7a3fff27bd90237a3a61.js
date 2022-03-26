@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/Idleon-Insight-Frontend/static/js/runtime~main.8aac9075.js"
   },
   {
-    "revision": "9171f5635c01bfce9eca863c7577ebfe",
+    "revision": "11a526ecee87b67fac903138478ceac3",
     "url": "/Idleon-Insight-Frontend/index.html"
   }
 ];

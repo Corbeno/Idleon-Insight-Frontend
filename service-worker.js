@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Idleon-Insight-Frontend/precache-manifest.1598f3c9a4f14af8fcd019cbc7190c6d.js"
+  "/Idleon-Insight-Frontend/precache-manifest.d571258e83ac7a3fff27bd90237a3a61.js"
 );
 
 workbox.clientsClaim();
