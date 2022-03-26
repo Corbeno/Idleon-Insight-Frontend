@@ -1,15 +1,15 @@
 {
-  "main.css": "/static/css/main.1eafc09c.chunk.css",
-  "main.js": "/static/js/main.cf5a9353.chunk.js",
-  "main.js.map": "/static/js/main.cf5a9353.chunk.js.map",
-  "static/js/1.db20f86d.chunk.js": "/static/js/1.db20f86d.chunk.js",
-  "static/js/1.db20f86d.chunk.js.map": "/static/js/1.db20f86d.chunk.js.map",
-  "static/js/2.3a2e0e0b.chunk.js": "/static/js/2.3a2e0e0b.chunk.js",
-  "static/js/2.3a2e0e0b.chunk.js.map": "/static/js/2.3a2e0e0b.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.96cb2b49.js",
-  "runtime~main.js.map": "/static/js/runtime~main.96cb2b49.js.map",
-  "static/css/main.1eafc09c.chunk.css.map": "/static/css/main.1eafc09c.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.d1092d975a9f567f42fe8cde9a9639c6.js": "/precache-manifest.d1092d975a9f567f42fe8cde9a9639c6.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/Idleon-Insight-Frontend/static/css/main.1eafc09c.chunk.css",
+  "main.js": "/Idleon-Insight-Frontend/static/js/main.cf5a9353.chunk.js",
+  "main.js.map": "/Idleon-Insight-Frontend/static/js/main.cf5a9353.chunk.js.map",
+  "static/js/1.db20f86d.chunk.js": "/Idleon-Insight-Frontend/static/js/1.db20f86d.chunk.js",
+  "static/js/1.db20f86d.chunk.js.map": "/Idleon-Insight-Frontend/static/js/1.db20f86d.chunk.js.map",
+  "static/js/2.3a2e0e0b.chunk.js": "/Idleon-Insight-Frontend/static/js/2.3a2e0e0b.chunk.js",
+  "static/js/2.3a2e0e0b.chunk.js.map": "/Idleon-Insight-Frontend/static/js/2.3a2e0e0b.chunk.js.map",
+  "runtime~main.js": "/Idleon-Insight-Frontend/static/js/runtime~main.8aac9075.js",
+  "runtime~main.js.map": "/Idleon-Insight-Frontend/static/js/runtime~main.8aac9075.js.map",
+  "static/css/main.1eafc09c.chunk.css.map": "/Idleon-Insight-Frontend/static/css/main.1eafc09c.chunk.css.map",
+  "index.html": "/Idleon-Insight-Frontend/index.html",
+  "precache-manifest.1598f3c9a4f14af8fcd019cbc7190c6d.js": "/Idleon-Insight-Frontend/precache-manifest.1598f3c9a4f14af8fcd019cbc7190c6d.js",
+  "service-worker.js": "/Idleon-Insight-Frontend/service-worker.js"
 }
