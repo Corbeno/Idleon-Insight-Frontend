@@ -1,15 +1,15 @@
 {
-  "main.css": "/Idleon-Insight/static/css/main.1eafc09c.chunk.css",
-  "main.js": "/Idleon-Insight/static/js/main.cf5a9353.chunk.js",
-  "main.js.map": "/Idleon-Insight/static/js/main.cf5a9353.chunk.js.map",
-  "static/js/1.db20f86d.chunk.js": "/Idleon-Insight/static/js/1.db20f86d.chunk.js",
-  "static/js/1.db20f86d.chunk.js.map": "/Idleon-Insight/static/js/1.db20f86d.chunk.js.map",
-  "static/js/2.3a2e0e0b.chunk.js": "/Idleon-Insight/static/js/2.3a2e0e0b.chunk.js",
-  "static/js/2.3a2e0e0b.chunk.js.map": "/Idleon-Insight/static/js/2.3a2e0e0b.chunk.js.map",
-  "runtime~main.js": "/Idleon-Insight/static/js/runtime~main.771c2920.js",
-  "runtime~main.js.map": "/Idleon-Insight/static/js/runtime~main.771c2920.js.map",
-  "static/css/main.1eafc09c.chunk.css.map": "/Idleon-Insight/static/css/main.1eafc09c.chunk.css.map",
-  "index.html": "/Idleon-Insight/index.html",
-  "precache-manifest.3d1cc200df9016f8cbd78726fcaf057f.js": "/Idleon-Insight/precache-manifest.3d1cc200df9016f8cbd78726fcaf057f.js",
-  "service-worker.js": "/Idleon-Insight/service-worker.js"
+  "main.css": "/Idleon-Insight-Frontend/static/css/main.1eafc09c.chunk.css",
+  "main.js": "/Idleon-Insight-Frontend/static/js/main.cf5a9353.chunk.js",
+  "main.js.map": "/Idleon-Insight-Frontend/static/js/main.cf5a9353.chunk.js.map",
+  "static/js/1.db20f86d.chunk.js": "/Idleon-Insight-Frontend/static/js/1.db20f86d.chunk.js",
+  "static/js/1.db20f86d.chunk.js.map": "/Idleon-Insight-Frontend/static/js/1.db20f86d.chunk.js.map",
+  "static/js/2.3a2e0e0b.chunk.js": "/Idleon-Insight-Frontend/static/js/2.3a2e0e0b.chunk.js",
+  "static/js/2.3a2e0e0b.chunk.js.map": "/Idleon-Insight-Frontend/static/js/2.3a2e0e0b.chunk.js.map",
+  "runtime~main.js": "/Idleon-Insight-Frontend/static/js/runtime~main.8aac9075.js",
+  "runtime~main.js.map": "/Idleon-Insight-Frontend/static/js/runtime~main.8aac9075.js.map",
+  "static/css/main.1eafc09c.chunk.css.map": "/Idleon-Insight-Frontend/static/css/main.1eafc09c.chunk.css.map",
+  "index.html": "/Idleon-Insight-Frontend/index.html",
+  "precache-manifest.053f7b61bcdb40962bacf4ee7d2739fd.js": "/Idleon-Insight-Frontend/precache-manifest.053f7b61bcdb40962bacf4ee7d2739fd.js",
+  "service-worker.js": "/Idleon-Insight-Frontend/service-worker.js"
 }

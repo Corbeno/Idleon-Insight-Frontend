@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Idleon-Insight/precache-manifest.3d1cc200df9016f8cbd78726fcaf057f.js"
+  "/Idleon-Insight-Frontend/precache-manifest.053f7b61bcdb40962bacf4ee7d2739fd.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Idleon-Insight/index.html", {
+workbox.routing.registerNavigationRoute("/Idleon-Insight-Frontend/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
