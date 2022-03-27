@@ -20,7 +20,7 @@ const Search = () => {
     return (
         <div id="searchPage">
             <h1 style={{textAlign: "center"}}>Idleon Insight</h1>
-            <p style={{textAlign: "center"}}>Please note this website is actively under development and not all Idleon data is present!</p>
+            <p style={{textAlign: "center", color: "white"}}>Please note this website is actively under development and not all Idleon data is present!</p>
             <div id="searchInput" style={{display: "flex"}}>
                 <input 
                     name="text" 
