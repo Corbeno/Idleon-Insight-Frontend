@@ -19,7 +19,7 @@ const Search = () => {
 
     return (
         <div id="searchPage">
-            <h1>Idleon Insight</h1>
+            <h1 style={{textAlign: "center"}}>Idleon Insight</h1>
             <div id="searchInput" style={{display: "flex"}}>
                 <input 
                     name="text" 
@@ -60,14 +60,14 @@ const SearchResult = ({ searchText, data }) => {
     return (
         <table id="table">
             <tr id="tr-header">
-                <th>Type</th>
+                <th>Source</th>
                 <th>Name</th>
                 <th>Bonus</th>
             </tr>
             {displayData.map(function(each){
                 return(
                     <tr>
-                        <th class="typeColumn">{each.source || ""}</th>
+                        <th class="sourceColumn">{each.source || ""}</th>
                         <th class="nameColumn">{each.name}</th>
                         <th class="bonusColumn">{each.bonuses}
                         </th>
