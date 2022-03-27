@@ -16,7 +16,7 @@
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build && touch build/.nojekyll",
+    "build": "react-scripts build && touch build/.nojekyll && echo idleoninsight.com > build/CNAME",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
