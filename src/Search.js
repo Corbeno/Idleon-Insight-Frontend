@@ -18,9 +18,9 @@ const Search = () => {
     }
 
     return (
-        <div>
+        <div id="searchPage">
             <h1>Idleon Insight</h1>
-            <div style={{display: "flex", alignItems: 'center'}}>
+            <div id="searchInput" style={{display: "flex"}}>
                 <input 
                     name="text" 
                     type="text" 
@@ -34,7 +34,10 @@ const Search = () => {
                         setSearchText(text)
                     }}
                 />
-                <p class="hovertext" data-hover="Accepts regular search or Regex. Ignores case">?</p>
+                <p 
+                class="hovertext" 
+                data-hover="Accepts regular search or Regex. Ignores case"
+                >?</p>
             </div>
             {/* <button>Search</button> */}
             <SearchResult searchText = {searchText} data={gameData}/>
@@ -55,7 +58,7 @@ const SearchResult = ({ searchText, data }) => {
     displayData = searchData(regex, data);
     console.log(regex);
     return (
-        <table>
+        <table id="table">
             <tr id="tr-header">
                 <th>Type</th>
                 <th>Name</th>
@@ -64,9 +67,10 @@ const SearchResult = ({ searchText, data }) => {
             {displayData.map(function(each){
                 return(
                     <tr>
-                        <th>{each.source || ""}</th>
-                        <th>{each.name}</th>
-                        <th>{each.bonuses}</th>
+                        <th class="typeColumn">{each.source || ""}</th>
+                        <th class="nameColumn">{each.name}</th>
+                        <th class="bonusColumn">{each.bonuses}
+                        </th>
                     </tr>
                 )
             })}
