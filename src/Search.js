@@ -56,7 +56,7 @@ const SearchResult = ({ searchText, data }) => {
         regex = new RegExp(searchText, regexParams);
     }
     displayData = searchData(regex, data);
-    console.log(regex);
+    // console.log(regex);
     return (
         <table id="table">
             <tr id="tr-header">
