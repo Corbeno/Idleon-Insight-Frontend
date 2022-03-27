@@ -70,7 +70,9 @@ const SearchResult = ({ searchText, data }) => {
                     <tr>
                         <th class="sourceColumn">{each.source || ""}</th>
                         <th class="nameColumn">{each.name}</th>
-                        <th class="bonusColumn">{each.bonuses}
+                        <th class="bonusColumn">{each.bonuses.map(function(eachBonus, i, arr){
+                            return(" " + eachBonus + ((i == arr.length-1) ? " ": ","));
+                        })}
                         </th>
                     </tr>
                 )
