@@ -3,7 +3,7 @@ import "./Search.css";
 const Search = () => {
     const [searchText, setSearchText] = useState("");
     const [gameData, setGameData] = useState("empty");
-
+    const debounceSearchText = debounce((text) => setSearchText(text));
     React.useEffect(() => {
         // console.log('MyComponent onMount');
         getData(setGameData);
@@ -28,7 +28,7 @@ const Search = () => {
                     placeholder="Search" 
                     onChange={(event) => {
                         let text = event.target.value;
-                        setSearchText(text)
+                        debounceSearchText(text);
                     }}
                 />
                 <p 
@@ -89,6 +89,14 @@ const SearchResult = ({ searchText, data }) => {
             })}
         </table>
     );
+}
+
+function debounce(func, timeout = 300){
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
 }
 
 function searchData(search, data){
