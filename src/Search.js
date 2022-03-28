@@ -46,6 +46,7 @@ const SearchResult = ({ searchText, data }) => {
     let regex = null;
     let displayData = null;
     let regexParams = "i"; //i = ignore case
+    let searchPushToBottom = ["Armor", "Tool", "Weapon", "Upgrade Stone"];
     if(!isValidRegex(searchText)){
         regex = new RegExp(regexEscape(searchText), regexParams);
     }else{
@@ -53,7 +54,18 @@ const SearchResult = ({ searchText, data }) => {
     }
     displayData = searchData(regex, data);
     displayData = displayData.sort(function(a, b){
-        return ('' + a.source).localeCompare(b.source);
+        console.log("num: " + ('' + a.source).localeCompare(b.source));
+        let aa = searchPushToBottom.includes(a.source);
+        let bb = searchPushToBottom.includes(b.source)
+        if(!aa && !bb){
+            return ('' + a.source).localeCompare(b.source);
+        }else if(aa && !bb){
+            return 1;
+        }else if(!aa && bb){
+            return -1;
+        }else{
+            return ('' + a.source).localeCompare(b.source);
+        }
 
     })
     return (
