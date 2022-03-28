@@ -20,18 +20,14 @@ const Search = () => {
     return (
         <div id="searchPage">
             <h1 style={{textAlign: "center"}}>Idleon Insight</h1>
-            <p style={{textAlign: "center", color: "white"}}>Please note this website is actively under development and not all Idleon data is present!</p>
-            <div id="searchInput" style={{display: "flex"}}>
+            <p style={{textAlign: "center", color: "white"}}>See missing data? Report it!</p>
+            <div id="searchInput" style={{display: "flex", paddingBottom:0}}>
                 <input 
                     name="text" 
                     type="text" 
                     placeholder="Search" 
                     onChange={(event) => {
                         let text = event.target.value;
-                        if(!isRegex(text)){
-                            //TODO handle inproper regex
-                            return;
-                        }
                         setSearchText(text)
                     }}
                 />
@@ -40,9 +36,8 @@ const Search = () => {
                 data-hover="Accepts regular search or Regex. Ignores case"
                 >?</p>
             </div>
-            {/* <button>Search</button> */}
+            <p style={{textAlign: "center", color: "white", marginTop:0}}>Searches exclusively through the Bonus column</p>
             <SearchResult searchText = {searchText} data={gameData}/>
-            {/* <p>{JSON.stringify(gameData)}</p> */}
         </div>
     );
 }
@@ -106,7 +101,6 @@ function regexEscape(str) {
     return str.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
 }
 
-//Get Method
 function getData(setJson){
     fetch("https://raw.githubusercontent.com/Corbeno/Idleon-Insight/main/output/output.json")
         .then((response) => response.json())
@@ -115,8 +109,4 @@ function getData(setJson){
     });
 };
 
-
-function isRegex(text){
-    return true;
-}
 export default Search;
