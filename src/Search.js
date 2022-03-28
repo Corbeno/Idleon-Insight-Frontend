@@ -52,6 +52,10 @@ const SearchResult = ({ searchText, data }) => {
         regex = new RegExp(searchText, regexParams);
     }
     displayData = searchData(regex, data);
+    displayData = displayData.sort(function(a, b){
+        return ('' + a.source).localeCompare(b.source);
+
+    })
     return (
         <table id="table">
             <tr id="tr-header">
