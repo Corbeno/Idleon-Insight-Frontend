@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import {useLocation} from "react-router-dom";
 import "./Search.css";
 const Search = () => {
     const [searchText, setSearchText] = useState("");
     const [gameData, setGameData] = useState("empty");
     const debounceSearchText = debounce((text) => setSearchText(text));
+    const queryParams = new URLSearchParams(window.location.search)
+    const search = queryParams.get("search");
     React.useEffect(() => {
         // console.log('MyComponent onMount');
         getData(setGameData);
@@ -25,7 +28,7 @@ const Search = () => {
                 <input 
                     name="text" 
                     type="text" 
-                    placeholder="Search" 
+                    placeholder="Search"
                     onChange={(event) => {
                         let text = event.target.value;
                         debounceSearchText(text);
@@ -54,7 +57,6 @@ const SearchResult = ({ searchText, data }) => {
     }
     displayData = searchData(regex, data);
     displayData = displayData.sort(function(a, b){
-        console.log("num: " + ('' + a.source).localeCompare(b.source));
         let aa = searchPushToBottom.includes(a.source);
         let bb = searchPushToBottom.includes(b.source)
         if(!aa && !bb){
