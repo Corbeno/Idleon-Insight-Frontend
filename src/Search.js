@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {useLocation} from "react-router-dom";
 import "./Search.css";
 const Search = () => {
-    const [searchText, setSearchText] = useState("");
-    const [gameData, setGameData] = useState("empty");
-    const debounceSearchText = debounce((text) => setSearchText(text));
     const queryParams = new URLSearchParams(window.location.search)
     const search = queryParams.get("search");
-    React.useEffect(() => {
-        // console.log('MyComponent onMount');
+    const [searchText, setSearchText] = useState(search || "");
+    const [gameData, setGameData] = useState("empty");
+    const debounceSearchText = debounce((text) => setSearchText(text));
+    
+    useEffect(() => {
         getData(setGameData);
-        return () => {
-            // console.log('MyComponent onUnmount');
-        };
     }, []);
+
+    useEffect(() => {
+        const el = document.getElementById("inputBox");
+        if(el){
+            el.value = search || "";
+        }
+    });
 
     if(gameData === "empty"){
         //TODO return error?
@@ -26,16 +30,19 @@ const Search = () => {
             <p style={{textAlign: "center", color: "white"}}>See missing data? Report it!</p>
             <div id="searchInput" style={{display: "flex", paddingBottom:0}}>
                 <input 
+                    id="inputBox"
                     name="text" 
                     type="text" 
                     placeholder="Search"
                     onChange={(event) => {
                         let text = event.target.value;
+                        window.history.pushState( {} , '', '?search=' + encodeURIComponent(text));
                         debounceSearchText(text);
                     }}
+                    // value={searchText}
                 />
                 <p 
-                class="hovertext" 
+                className="hovertext" 
                 data-hover="Accepts regular search or Regex. Ignores case"
                 >?</p>
             </div>
@@ -80,9 +87,9 @@ const SearchResult = ({ searchText, data }) => {
             {displayData.map(function(each){
                 return(
                     <tr>
-                        <th class="sourceColumn">{each.source || ""}</th>
-                        <th class="nameColumn">{each.name}</th>
-                        <th class="bonusColumn">{each.bonuses.map(function(eachBonus, i, arr){
+                        <th className="sourceColumn">{each.source || ""}</th>
+                        <th className="nameColumn">{each.name}</th>
+                        <th className="bonusColumn">{each.bonuses.map(function(eachBonus, i, arr){
                             return(" " + eachBonus + ((i === arr.length-1) ? " ": ","));
                         })}
                         </th>
