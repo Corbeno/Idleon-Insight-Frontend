@@ -5,10 +5,10 @@ const Search = () => {
     const [gameData, setGameData] = useState("empty");
 
     React.useEffect(() => {
-        console.log('MyComponent onMount');
+        // console.log('MyComponent onMount');
         getData(setGameData);
         return () => {
-            console.log('MyComponent onUnmount');
+            // console.log('MyComponent onUnmount');
         };
     }, []);
 
@@ -57,7 +57,6 @@ const SearchResult = ({ searchText, data }) => {
         regex = new RegExp(searchText, regexParams);
     }
     displayData = searchData(regex, data);
-    // console.log(regex);
     return (
         <table id="table">
             <tr id="tr-header">
@@ -71,7 +70,7 @@ const SearchResult = ({ searchText, data }) => {
                         <th class="sourceColumn">{each.source || ""}</th>
                         <th class="nameColumn">{each.name}</th>
                         <th class="bonusColumn">{each.bonuses.map(function(eachBonus, i, arr){
-                            return(" " + eachBonus + ((i == arr.length-1) ? " ": ","));
+                            return(" " + eachBonus + ((i === arr.length-1) ? " ": ","));
                         })}
                         </th>
                     </tr>
@@ -87,7 +86,7 @@ function searchData(search, data){
         for(let bonus of obj.bonuses){
             if(search.test(bonus)){
                 r.push(obj);
-                continue;
+                break;
             }
         }
     }
