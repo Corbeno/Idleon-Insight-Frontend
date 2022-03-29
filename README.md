@@ -1,4 +1,4 @@
-# Idleon Insight Frontend <a href="https://idleoninsight.com"><img src="https://github.com/Corbeno/Idleon-Insight-Frontend/blob/main/public/insightLogo.png?raw=true" width="30" height="30" /></a>
+# Idleon Insight Frontend <a href="https://idleoninsight.com" target="_blank"><img src="https://github.com/Corbeno/Idleon-Insight-Frontend/blob/main/public/insightLogo.png?raw=true" width="30" height="30" /></a>
 
 This repo is for the frontend portion for https://idleoninsight.com, which displays parsed game data and makes it searchable for the videogame Idleon. 
 
