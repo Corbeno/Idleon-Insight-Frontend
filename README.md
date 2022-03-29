@@ -4,6 +4,16 @@ This repo is for the frontend portion for https://idleoninsight.com, which displ
 
 The code that does the parsing can be found [here](https://github.com/Corbeno/Idleon-Insight)
 
+## Searching
+The search feature accepts Regex and basic string searches (if invalid regex is applied). The following are examples of searches that might be useful:
+https://idleoninsight.com/?search=weapon.*power
+
+https://idleoninsight.com/?search=skill.*xp
+
+https://idleoninsight.com/?search=money%7Ccash
+
+Whenever you make a search, the URL is automatically updated to match, so you can share the results with your friends!
+
 ## Can I use the same data set for my own website?
 Yes! Head on over to the [Idleon Insight](https://github.com/Corbeno/Idleon-Insight) repository, which has instructions on how to use the JSON yourself.
 ## I found something that is missing!
