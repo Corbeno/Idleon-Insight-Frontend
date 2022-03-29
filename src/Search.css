@@ -99,3 +99,27 @@ tr {
 .bonusColumn {
     text-align: left;
 }
+
+a:link {
+    color: #8c8cc4;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #8c8cc4;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }

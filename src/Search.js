@@ -27,7 +27,7 @@ const Search = () => {
     return (
         <div id="searchPage">
             <h1 style={{textAlign: "center"}}>Idleon Insight</h1>
-            <p style={{textAlign: "center", color: "white"}}>See missing data? Report it!</p>
+            <p style={{textAlign: "center", color: "white"}}>See missing data? <a href="https://github.com/Corbeno/Idleon-Insight-Frontend/issues" target="_blank">Report it!</a></p>
             <div id="searchInput" style={{display: "flex", paddingBottom:0}}>
                 <input 
                     id="inputBox"
