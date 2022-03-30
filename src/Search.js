@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import {useLocation} from "react-router-dom";
 import "./Search.css";
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 
 const Search = () => {
     const queryParams = new URLSearchParams(window.location.search)
@@ -11,9 +11,9 @@ const Search = () => {
     const debounceSearchText = debounce((text) => setSearchText(text));
     
     useEffect(() => {
-        const TRACKING_ID = "G-NXNDJ3EXM6";
-        ReactGA.initialize(TRACKING_ID);
-        ReactGA.pageview(window.location.pathname);
+    //     const TRACKING_ID = "G-NXNDJ3EXM6";
+    //     ReactGA.initialize(TRACKING_ID);
+    //     ReactGA.pageview(window.location.pathname);
         getData(setGameData);
     }, []);
 
