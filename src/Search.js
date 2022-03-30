@@ -78,23 +78,27 @@ const SearchResult = ({ searchText, data }) => {
     })
     return (
         <table id="table">
-            <tr id="tr-header">
-                <th>Source</th>
-                <th>Name</th>
-                <th>Bonus</th>
-            </tr>
-            {displayData.map(function(each){
-                return(
-                    <tr>
-                        <th className="sourceColumn">{each.source || ""}</th>
-                        <th className="nameColumn">{each.name}</th>
-                        <th className="bonusColumn">{each.bonuses.map(function(eachBonus, i, arr){
-                            return(" " + eachBonus + ((i === arr.length-1) ? " ": ","));
-                        })}
-                        </th>
-                    </tr>
-                )
-            })}
+            <thead>
+                <tr id="tr-header">
+                    <th>Source</th>
+                    <th>Name</th>
+                    <th>Bonus</th>
+                </tr>
+            </thead>
+            <tbody>
+                {displayData.map(function(each, i){
+                    return(
+                        <tr key={each.source + each.name + i}>
+                            <th className="sourceColumn">{each.source || ""}</th>
+                            <th className="nameColumn">{each.name}</th>
+                            <th className="bonusColumn">{each.bonuses.map(function(eachBonus, i, arr){
+                                return(" " + eachBonus + ((i === arr.length-1) ? " ": ","));
+                            })}
+                            </th>
+                        </tr>
+                    )
+                })}
+            </tbody>
         </table>
     );
 }
