@@ -54,8 +54,9 @@ const Search = () => {
 const SearchResult = ({ searchText, data }) => {
     let regex = null;
     let displayData = null;
-    let regexParams = "i"; //i = ignore case
+    let regexParams = "ig"; //i = ignore case, g = global
     let searchPushToBottom = ["Armor", "Tool", "Weapon", "Upgrade Stone", "Obol", "Gem Shop"];
+    let singleVeryBottom = "Gem Shop";
     if(!isValidRegex(searchText)){
         regex = new RegExp(regexEscape(searchText), regexParams);
     }else{
@@ -63,6 +64,13 @@ const SearchResult = ({ searchText, data }) => {
     }
     displayData = searchData(regex, data);
     displayData = displayData.sort(function(a, b){
+        if(a.source === singleVeryBottom){
+            console.log("1");
+            return 1;
+        }else if(b.source === singleVeryBottom){
+            console.log("-1");
+            return -1;
+        }
         let aa = searchPushToBottom.includes(a.source);
         let bb = searchPushToBottom.includes(b.source)
         if(!aa && !bb){
