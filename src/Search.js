@@ -55,7 +55,7 @@ const SearchResult = ({ searchText, data }) => {
     let regex = null;
     let displayData = null;
     let regexParams = "i"; //i = ignore case
-    let searchPushToBottom = ["Armor", "Tool", "Weapon", "Upgrade Stone"];
+    let searchPushToBottom = ["Armor", "Tool", "Weapon", "Upgrade Stone", "Obol", "Gem Shop"];
     if(!isValidRegex(searchText)){
         regex = new RegExp(regexEscape(searchText), regexParams);
     }else{
