@@ -55,7 +55,8 @@ const SearchResult = ({ searchText, data }) => {
     let regex = null;
     let displayData = null;
     let regexParams = "ig"; //i = ignore case, g = global
-    let searchPushToBottom = ["Armor", "Tool", "Weapon", "Upgrade Stone", "Obol", "Gem Shop"];
+    //order displayed at bottom coorelates to the order in list
+    let searchPushToBottom = ["Obol", "Armor", "Tool", "Weapon", "Upgrade Stone", "Gem Shop"];
     let singleVeryBottom = "Gem Shop";
     if(!isValidRegex(searchText)){
         regex = new RegExp(regexEscape(searchText), regexParams);
@@ -79,8 +80,9 @@ const SearchResult = ({ searchText, data }) => {
             return 1;
         }else if(!aa && bb){
             return -1;
-        }else{
-            return ('' + a.source).localeCompare(b.source);
+        }else{ //aa && bb
+            return searchPushToBottom.indexOf(a.source) - searchPushToBottom.indexOf(b.source);
+            // return ('' + a.source).localeCompare(b.source);
         }
 
     })
