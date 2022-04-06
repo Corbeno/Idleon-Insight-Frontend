@@ -14,6 +14,11 @@ https://idleoninsight.com/?search=money%7Ccash
 
 Whenever you make a search, the URL is automatically updated to match, so you can share the results with your friends!
 
+## Preset Searches
+Insight also provides custom made searches for commonly searched bonuses! If you would like to add your own, either open a github issue or make the change yourself and open a pull request!
+
+Adding a custom search is *very* easy. Simply add an entry to the file in src/customSearches.json
+
 ## Can I use the same data set for my own website?
 Yes! Head on over to the [Idleon Insight](https://github.com/Corbeno/Idleon-Insight) repository, which has instructions on how to use the JSON yourself.
 ## I found something that is missing!

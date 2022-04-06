@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Search.css";
+import customSearches from './customSearches.json';
 
 const Search = () => {
     const queryParams = new URLSearchParams(window.location.search)
@@ -19,6 +20,11 @@ const Search = () => {
         }
     });
 
+    function setSearch(text){
+        window.history.pushState( {} , '', '?search=' + encodeURIComponent(text));
+        debounceSearchText(text);
+    }
+
     if(gameData === "empty"){
         //TODO return error?
         return null;
@@ -35,9 +41,8 @@ const Search = () => {
                     type="text" 
                     placeholder="Search"
                     onChange={(event) => {
-                        let text = event.target.value;
-                        window.history.pushState( {} , '', '?search=' + encodeURIComponent(text));
-                        debounceSearchText(text);
+                        document.getElementById("customSearchSelector").value = "none";
+                        setSearch(event.target.value)
                     }}
                 />
                 <p 
@@ -45,6 +50,12 @@ const Search = () => {
                 data-hover="Accepts regular search or Regex. Ignores case"
                 >?</p>
             </div>
+            <select id="customSearchSelector" onChange={(e) => {setSearch(e.target.value)}}>
+                <option value="none" selected disabled hidden>Custom Search</option>
+                {customSearches.map((each, i) => {
+                    return (<option key={"customSearch" + i} value={each.search}>{each.name}</option>)
+                })}
+            </select>
             <p style={{textAlign: "center", color: "white", marginTop:0}}>Searches exclusively through the Bonus column</p>
             <SearchResult searchText = {searchText} data={gameData}/>
         </div>
@@ -66,10 +77,10 @@ const SearchResult = ({ searchText, data }) => {
     displayData = searchData(regex, data);
     displayData = displayData.sort(function(a, b){
         if(a.source === singleVeryBottom){
-            console.log("1");
+            // console.log("1");
             return 1;
         }else if(b.source === singleVeryBottom){
-            console.log("-1");
+            // console.log("-1");
             return -1;
         }
         let aa = searchPushToBottom.includes(a.source);

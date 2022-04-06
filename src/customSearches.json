@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Drop Rate",
+        "search": "^(?!.*(dungeon|card|base.*luk|stamp|key|gem| ore)).*drop.*(rate|chance|rarity)" 
+    },
+    {
+        "name": "Card Drop",
+        "search": "card drop (chance|rate)*"
+    },
+    {
+        "name": "Money",
+        "search": "(money|coins|cash)"
+    },
+    {
+        "name": "Crystal Spawn",
+        "search": "crystal.*(mob|monster|spawn)"
+    },
+    {
+        "name": "Attack Speed",
+        "search": "((attack|atk).*(spd|speed|rate))"
+    },
+    {
+        "name": "Movement Speed",
+        "search": "^(?!.*(for every)).*movement.*(speed|spd)"
+    }
+]

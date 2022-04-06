@@ -123,3 +123,10 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
   }
+
+#customSearchSelector {
+    /* display: flex; */
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
