@@ -1,7 +1,7 @@
 [
     {
         "name": "Drop Rate",
-        "search": "^(?!.*(dungeon|card|base.*luk|stamp|key|gem| ore|reward)).*drop.*(rate|chance|rarity)" 
+        "search": "(^(?!.*(dungeon|card|base.*luk|stamp|key|gem| ore|reward)).*drop.*(rate|chance|rarity))|drop," 
     },
     {
         "name": "Card Drop",
