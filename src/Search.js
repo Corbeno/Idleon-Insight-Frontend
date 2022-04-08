@@ -33,6 +33,12 @@ const Search = () => {
     return (
         <div id="searchPage">
             <h1 style={{textAlign: "center"}}>Idleon Insight <a style={{paddingLeft:10}} href="https://github.com/Corbeno/Idleon-Insight-Frontend" target="_blank"><img src="./github-logo.png" width="30" height="30" /></a></h1>
+            <select id="customSearchSelector" onChange={(e) => {setSearch(e.target.value)}}>
+                <option value="none" selected disabled hidden>Custom Search</option>
+                {customSearches.map((each, i) => {
+                    return (<option key={"customSearch" + i} value={each.search}>{each.name}</option>)
+                })}
+            </select>
             <p style={{textAlign: "center", color: "white"}}>See missing data? <a href="https://github.com/Corbeno/Idleon-Insight-Frontend/issues" target="_blank">Report it!</a></p>
             <div id="searchInput" style={{display: "flex", paddingBottom:0}}>
                 <input 
@@ -50,12 +56,6 @@ const Search = () => {
                 data-hover="Accepts regular search or Regex. Ignores case"
                 >?</p>
             </div>
-            <select id="customSearchSelector" onChange={(e) => {setSearch(e.target.value)}}>
-                <option value="none" selected disabled hidden>Custom Search</option>
-                {customSearches.map((each, i) => {
-                    return (<option key={"customSearch" + i} value={each.search}>{each.name}</option>)
-                })}
-            </select>
             <p style={{textAlign: "center", color: "white", marginTop:0}}>Searches exclusively through the Bonus column</p>
             <SearchResult searchText = {searchText} data={gameData}/>
         </div>
@@ -65,7 +65,7 @@ const Search = () => {
 const SearchResult = ({ searchText, data }) => {
     let regex = null;
     let displayData = null;
-    let regexParams = "ig"; //i = ignore case, g = global
+    let regexParams = "i"; //i = ignore case, don't use global tag here it breaks stuff...
     //order displayed at bottom coorelates to the order in list
     let searchPushToBottom = ["Obol", "Armor", "Tool", "Weapon", "Upgrade Stone", "Gem Shop"];
     let singleVeryBottom = "Gem Shop";
@@ -77,10 +77,8 @@ const SearchResult = ({ searchText, data }) => {
     displayData = searchData(regex, data);
     displayData = displayData.sort(function(a, b){
         if(a.source === singleVeryBottom){
-            // console.log("1");
             return 1;
         }else if(b.source === singleVeryBottom){
-            // console.log("-1");
             return -1;
         }
         let aa = searchPushToBottom.includes(a.source);
@@ -136,7 +134,7 @@ function searchData(search, data){
     let r = [];
     for(let obj of data){
         for(let bonus of obj.bonuses){
-            if(search.test(bonus)){
+            if(search.test(bonus) === true){
                 r.push(obj);
                 break;
             }
