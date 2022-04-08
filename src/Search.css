@@ -130,3 +130,11 @@ a:link {
     top: 1em;
     right: 1em;
 }
+
+#resultCount {
+    position: flex;
+    color: white;
+    text-align: center;
+    padding-bottom: 1%;
+    /* background-color: red; */
+}
