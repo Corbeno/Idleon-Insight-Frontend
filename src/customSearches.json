@@ -20,7 +20,55 @@
         "search": "((attack|atk).*(spd|speed|rate))"
     },
     {
+        "name": "Crit Chance",
+        "search": "^(?!.*(critter|base agi)).*crit.*chance"
+    },
+    {
+        "name": "Crit Damage",
+        "search": "^(?!.*(base str)).*crit.*damage"
+    },
+    {
         "name": "Movement Speed",
         "search": "^(?!.*(for every)).*movement.*(speed|spd)"
+    },
+    {
+        "name": "Weapon Power",
+        "search": "weapon.*power"
+    },
+    {
+        "name": "Lab Exp",
+        "search": "lab.*xp"
+    },
+    {
+        "name": "Lab Efficiency",
+        "search": "lab.*eff"
+    },
+    {
+        "name": "Cooking Exp",
+        "search": "^(?!.*(cranium)).*cookin.*xp"
+    },
+    {
+        "name": "Cooking Efficiency",
+        "search": "cooking.*eff"
+    },
+    {
+        "name": "Cooking Speed",
+        "search": "^(?!.*(new recipe cooking)).*cooking.*sp.*d"
+    },
+    {
+        "name": "New Recipe Speed",
+        "search": "new recipe"
+    },
+    {
+        "name": "Breeding Exp",
+        "search": "breeding.*xp"
+    },
+    {
+        "name": "New Pet Chance",
+        "search": "new pet"
+    },
+    {
+        "name": "Egg Incubation Time",
+        "search": "incubat.*time"
     }
 ]
