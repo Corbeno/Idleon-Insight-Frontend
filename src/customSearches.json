@@ -53,7 +53,7 @@
     },
     {
         "name": "Cooking Speed",
-        "search": "^(?!.*(new recipe cooking)).*cooking.*sp.*d"
+        "search": "^(?!.*(new recipe cooking)).*cooking.*(sp.*d|faster)"
     },
     {
         "name": "New Recipe Speed",
