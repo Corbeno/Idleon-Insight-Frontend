@@ -29,7 +29,7 @@
     },
     {
         "name": "Movement Speed",
-        "search": "^(?!.*(for every)).*movement.*(speed|spd)"
+        "search": "^(?!.*(for every)).*(movement|move).*(speed|spd)"
     },
     {
         "name": "Weapon Power",
