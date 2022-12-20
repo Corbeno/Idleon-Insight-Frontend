@@ -70,5 +70,29 @@
     {
         "name": "Egg Incubation Time",
         "search": "incubat.*time"
+    },
+    {
+        "name": "Sailing Speed",
+        "search": "sailing.*(sp.*d|progress)"
+    },
+    {
+        "name": "Sailing EXP",
+        "search": "sailing.*xp"
+    },
+    {
+        "name": "Gaming Bits",
+        "search": "bits"
+    },
+    {
+        "name": "Gaming EXP",
+        "search": "gaming.*xp"
+    },
+    {
+        "name": "Divinity Gain",
+        "search": "(divinity (gain|for|points))|(gives.*divinity)"
+    },
+    {
+        "name": "Divinity EXP",
+        "search": "^(?!.*(pearl)).*divinity.*xp"
     }
 ]
