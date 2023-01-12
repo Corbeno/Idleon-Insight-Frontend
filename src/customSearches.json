@@ -72,6 +72,30 @@
         "search": "incubat.*time"
     },
     {
+        "name": "Sailing Speed",
+        "search": "sailing.*(sp.*d|progress)"
+    },
+    {
+        "name": "Sailing EXP",
+        "search": "sailing.*xp"
+    },
+    {
+        "name": "Gaming Bits",
+        "search": "bits"
+    },
+    {
+        "name": "Gaming EXP",
+        "search": "gaming.*xp"
+    },
+    {
+        "name": "Divinity Gain",
+        "search": "(divinity (gain|for|points))|(gives.*divinity)"
+    },
+    {
+        "name": "Divinity EXP",
+        "search": "^(?!.*(pearl)).*divinity.*xp"
+    },
+    {
         "name": "Talent Max Level",
         "search": "^(?!.*((library.*(refresh|checkout).*speed)|(refunds)|(book.*of.*the.*wise))).*((max.*talent.*book)|(talent.*book)|(lv.*talents)|(maximum.*talent.*lv))"
     }
