@@ -70,5 +70,9 @@
     {
         "name": "Egg Incubation Time",
         "search": "incubat.*time"
+    },
+    {
+        "name": "Talent Max Level",
+        "search": "^(?!.*((library.*(refresh|checkout).*speed)|(refunds)|(book.*of.*the.*wise))).*((max.*talent.*book)|(talent.*book)|(lv.*talents)|(maximum.*talent.*lv))"
     }
 ]
