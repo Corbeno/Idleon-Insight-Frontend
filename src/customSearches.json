@@ -97,6 +97,6 @@
     },
     {
         "name": "Talent Max Level",
-        "search": "^(?!.*((library.*(refresh|checkout).*speed)|(refunds)|(book.*of.*the.*wise))).*((max.*talent.*book)|(talent.*book)|(lv.*talents)|(maximum.*talent.*lv))"
+        "search": "^(?!.*((library.*(refresh|checkout).*speed)|(refunds)|(book.*of.*the.*wise)|(random))).*((max.*talent.*book)|(talent.*book)|(lv.*talents)|(maximum.*talent.*lv)|(book.*max.*lv))"
     }
 ]
