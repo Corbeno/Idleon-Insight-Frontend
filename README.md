@@ -6,6 +6,7 @@ The code that does the parsing can be found [here](https://github.com/Corbeno/Id
 
 ## Searching
 The search feature accepts Regex and basic string searches (if invalid regex is applied). The following are examples of searches that might be useful:
+
 https://idleoninsight.com/?search=weapon.*power
 
 https://idleoninsight.com/?search=skill.*xp
